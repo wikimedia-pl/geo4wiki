@@ -102,6 +102,8 @@ input#geo-from {
   display: none;
 }
 
-form#geo-input {
-
+.success-msg {
+  display: none;
+  color: green;
+  font-weight: bold;
 }

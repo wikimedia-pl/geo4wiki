@@ -22,6 +22,7 @@
     <section id="converted-container">
       <h2>Wynik konwersji</h2>
       <input type="text" id="converted-result" value="" readonly></input>
+      <p class="success-msg">Skopiowane do schowka</p>
     </section>
   </article>
 
@@ -52,7 +53,9 @@
 
         $( "#converted-result" ).val( process( formData.get('from') ) );
 
-        $( "#converted-container").fadeIn();
+        var container = $( "#converted-container");
+
+        container.fadeIn();
 
         // copy to clipboard
         result.focus();
@@ -60,7 +63,7 @@
         document.execCommand("copy");
         result.blur();
 
-
+        container.find( '.success-msg' ).fadeIn();
       });
     </script>
   </footer>

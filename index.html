@@ -6,8 +6,9 @@
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/wmpl-style.css" />
   <link rel="stylesheet" href="css/geo4wiki.css" />
-  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-  <script src="geo-format-conversion.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.0.js" defer></script>
+  <script src="scripts/geo-format-conversion.js" defer></script>
+  <script src="scripts/geo4wiki-form.js" defer></script>
 </head>
 <body>
   <article>
@@ -45,31 +46,6 @@
 
       <p>Używasz? <a href="https://wikimedia.pl/darowizny/">Podziękuj i pomóż</a>!</p>
     </div>
-
-    <script>
-      $( "#geo-from" ).focus();
-
-      $( "#geo-input" ).submit(function( event ) {
-        event.preventDefault();
-        const formData = new FormData(event.target);
-
-        var result = document.getElementById("converted-result");
-
-        $( "#converted-result" ).val( process( formData.get('from') ) );
-
-        var container = $( "#converted-container");
-
-        container.fadeIn();
-
-        // copy to clipboard
-        result.focus();
-        result.setSelectionRange(0, result.value.length);
-        document.execCommand("copy");
-        result.blur();
-
-        container.find( '.success-msg' ).fadeIn();
-      });
-    </script>
   </footer>
 </body>
 </html>

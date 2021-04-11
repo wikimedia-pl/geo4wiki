@@ -10,16 +10,13 @@ function process( input ) {
 }
 
 function convert( dec, dir ) {
-  if ( dec >= 0 ) {
-    _adjust = Math.floor;
-  } else {
-    _adjust = Math.ceil;
-  }
+  degs = Math.abs( dec );
+  degs_int = Math.floor(degs);
 
-  mins = Math.abs((dec - _adjust(dec)) * 60);
-  secs = Math.abs((mins - _adjust(mins)) * 60);
+  mins = (degs - degs_int) * 60;
+  secs = (mins - Math.floor(mins)) * 60;
 
-  return _adjust(dec) + "°" + _adjust(mins) + "′" + Math.round( secs, 1) + "″" + get_hemisphere(dec,dir);
+  return degs_int + "°" + Math.floor(mins) + "′" + Math.round( secs, 1) + "″" + get_hemisphere(dec,dir);
 }
 
 function get_hemisphere( dec, dir ) {

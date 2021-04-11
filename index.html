@@ -4,7 +4,8 @@
   <title>geo4wiki: prosty konwerter współrzędnych geograficznych</title>
   <meta charset="utf-8"/>
   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/wmpl-style.css" />
+  <link rel="stylesheet" href="css/geo4wiki.css" />
   <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
   <script src="geo-format-conversion.js"></script>
 </head>
@@ -15,8 +16,8 @@
     <p>Prosty konwerter współrzędnych geograficznych z formatu dziesiętnego (<a href="https://maps.google.com/">Google Maps</a>) na zapis w stopniach.</p>
 
     <form id="geo-input">
-      <input type="text" id="geo-from" name="from" value="" pattern="-?[0-9]+(\.[0-9]+)?,-?[0-9]+(\.[0-9]+)?" />
-      <input type="submit" value="Konwertuj" class="button main-submit" />
+      <input type="text" id="geo-from" name="from" value="" pattern="-?[0-9]+(\.[0-9]+)?,-?[0-9]+(\.[0-9]+)?" class="combined-input-and-submit-left" />
+      <input type="submit" value="Konwertuj" class="button combined-input-and-submit-right" />
     </form>
 
     <section id="converted-container">

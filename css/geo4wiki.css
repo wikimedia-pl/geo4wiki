@@ -1,0 +1,16 @@
+/** page specific **/
+#converted-container {
+  margin-top: 1.2em;
+  display: none;
+}
+
+input#geo-from,
+input#converted-result {
+  width: 70%;
+}
+
+.success-msg {
+  display: none;
+  color: green;
+  font-weight: bold;
+}

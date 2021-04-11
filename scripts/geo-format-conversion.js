@@ -16,7 +16,7 @@ function convert( dec, dir ) {
   mins = (degs - degs_int) * 60;
   secs = (mins - Math.floor(mins)) * 60;
 
-  return degs_int + "°" + Math.floor(mins) + "′" + Math.round( secs, 1) + "″" + get_hemisphere(dec,dir);
+  return `${degs_int}°${Math.floor(mins)}′${Math.round(secs,1)}″${get_hemisphere(dec,dir)}`
 }
 
 function get_hemisphere( dec, dir ) {

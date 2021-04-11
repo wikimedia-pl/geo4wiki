@@ -1,7 +1,7 @@
-var geo_symbols = new Array();
-
-geo_symbols['lat'] = ['N','S'];
-geo_symbols['long'] = ['W','E'];
+const GEO_SYMBOLS = new Map([
+  ['lat', ['N','S']],
+  ['long', ['W','E']]
+]);
 
 function process( input ) {
   var coords = input.split( "," );
@@ -21,8 +21,8 @@ function convert( dec, dir ) {
 
 function get_hemisphere( dec, dir ) {
   if ( dec >= 0 ) {
-    return geo_symbols[dir][0];
+    return GEO_SYMBOLS.get(dir)[0]
   } else {
-    return geo_symbols[dir][1];
+    return GEO_SYMBOLS.get(dir)[1]
   }
 }

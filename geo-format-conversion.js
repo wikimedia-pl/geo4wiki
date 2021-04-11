@@ -16,8 +16,8 @@ function convert( dec, dir ) {
     _adjust = Math.ceil;
   }
 
-  mins = (dec - _adjust(dec)) * 60;
-  secs = (mins - _adjust(mins)) * 60;
+  mins = Math.abs((dec - _adjust(dec)) * 60);
+  secs = Math.abs((mins - _adjust(mins)) * 60);
 
   return _adjust(dec) + "°" + _adjust(mins) + "′" + Math.round( secs, 1) + "″" + get_hemisphere(dec,dir);
 }

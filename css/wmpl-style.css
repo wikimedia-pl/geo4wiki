@@ -30,7 +30,7 @@ article > header > h1 {
 }
 
 article > header > nav {
-  flex: 1 0 auto;
+  flex: 0 0 auto;
 }
 
 article > header > nav a {

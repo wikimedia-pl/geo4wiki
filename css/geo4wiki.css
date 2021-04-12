@@ -6,11 +6,12 @@
 
 input#geo-from,
 input#converted-result {
-  width: 70%;
+  width: 50%;
 }
 
 .success-msg {
   display: none;
   color: green;
   font-weight: bold;
+  padding-left: 0.8em;
 }

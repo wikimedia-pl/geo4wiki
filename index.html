@@ -9,10 +9,16 @@
   <script src="https://code.jquery.com/jquery-3.5.0.js" defer></script>
   <script src="scripts/geo-format-conversion.js" defer></script>
   <script src="scripts/geo4wiki-form.js" defer></script>
+  <script src="https://kit.fontawesome.com/3af13c9288.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
   <article>
-    <h1>geo4wiki</h1>
+    <header>
+      <h1>geo4wiki</h1>
+      <nav>
+        <a href="https://github.com/wikimedia-pl/geo4wiki">edytuj <span class="fab fa-github"></span></a>
+      </nav>
+    </header>
 
     <p>Prosty konwerter współrzędnych geograficznych z formatu dziesiętnego (<a href="https://maps.google.com/">Google Maps</a>) na zapis w stopniach.</p>
 
@@ -24,7 +30,7 @@
     <section id="converted-container">
       <h2>Wynik konwersji</h2>
       <input type="text" id="converted-result" value="" readonly></input>
-      <p class="success-msg">Skopiowane do schowka</p>
+      <p class="success-msg">Skopiowane do schowka <span class="fas fa-copy"></span></p>
     </section>
   </article>
 
@@ -34,9 +40,9 @@
         <img src="images/wikimedia-polska-logo-horizontal-white.png" />
       </a>
 
-      <p>Stworzone z ❤️ do wolnej wiedzy.</p>
+      <p>Stworzone z <i class="fas fa-heart"></i> do wolnej wiedzy.</p>
 
-      <p><a href="https://github.com/wikimedia-pl/geo4wiki">Zobacz i rozwiń kod na githubie</a></p>
+      <p><a href="https://github.com/wikimedia-pl/geo4wiki">Zobacz i rozwiń kod na githubie</a> <span class="fab fa-github"></span></p>
     </div>
 
     <div style="text-align: right">

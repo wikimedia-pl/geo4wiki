@@ -4,7 +4,7 @@ const GEO_SYMBOLS = new Map([
 ]);
 
 function process( input ) {
-  let output = new Array()
+  let output = new Array();
 
   input.split( ",", 2 ).forEach((item, i) => {
     output.push(
@@ -17,15 +17,14 @@ function process( input ) {
 }
 
 function dec_to_degs( dec ) {
-  degs = Math.abs( dec );
-  degs_int = Math.floor(degs);
+  let abs = Math.round(Math.abs(dec * 3600));
+  let degs = Math.floor(abs / 3600);
+  let mins = Math.floor((abs % 3600) / 60);
+  let secs = (abs % 3600) % 60;
 
-  mins = (degs - degs_int) * 60;
-  secs = (mins - Math.floor(mins)) * 60;
-
-  return `${degs_int}°${Math.floor(mins)}′${Math.round(secs,1)}″`
+  return `${degs}°${mins}′${secs}″`;
 }
 
 function get_hemisphere( dec, dir ) {
-  return dec >= 0 ? GEO_SYMBOLS.get(dir)[0] : GEO_SYMBOLS.get(dir)[1]
+  return dec >= 0 ? GEO_SYMBOLS.get(dir)[0] : GEO_SYMBOLS.get(dir)[1];
 }

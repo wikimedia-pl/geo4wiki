@@ -1,6 +1,6 @@
 const GEO_SYMBOLS = new Map([
   [0, ['N','S']], // latitude
-  [1, ['W','E']]  // longitude
+  [1, ['E','W']]  // longitude
 ]);
 
 function process( input ) {
